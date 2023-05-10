@@ -1,0 +1,1443 @@
+﻿{
+  "paragraphs": [
+    {
+      "title": "Aditya Chandi Nugroho (24400530111) & Catherine Benedicta (2440047993)",
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:11:49+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091600_792368248",
+      "id": "paragraph_1675160968653_1244664455",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:451"
+    },
+    {
+      "title": "Import Library",
+      "text": "// Import library sehingga dapat menggunakan SQL \nimport org.apache.spark.sql.types._",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:11:51+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.types._\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091601_-1482576570",
+      "id": "paragraph_1675160012546_-1941545382",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:452",
+      "dateFinished": "2023-02-01T08:12:56+0000",
+      "dateStarted": "2023-02-01T08:11:51+0000"
+    },
+    {
+      "title": "Read Dataset",
+      "text": "//Dataset diambil dari data \"walmart_stock\" dengan format csv dan disimpan di variabel bernama \"data\"\nval data = spark.read.format(\"csv\").option(\"sep\", \",\").option(\"inferSchema\", \"true\").option(\"header\", \"true\").load(\"file:///home/verulam-blue/AoL DMO Aditya dan Catherine/walmart_stock.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:12:57+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdata\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Date: timestamp, Open: double ... 5 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=0",
+              "$$hashKey": "object:3176"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=1",
+              "$$hashKey": "object:3177"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091601_-1074117816",
+      "id": "paragraph_1674901304439_-2093502190",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:453",
+      "dateFinished": "2023-02-01T08:13:21+0000",
+      "dateStarted": "2023-02-01T08:12:57+0000"
+    },
+    {
+      "title": "Data Type",
+      "text": "data.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:21+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- Date: timestamp (nullable = true)\n |-- Open: double (nullable = true)\n |-- High: double (nullable = true)\n |-- Low: double (nullable = true)\n |-- Close: double (nullable = true)\n |-- Volume: integer (nullable = true)\n |-- Adj Close: double (nullable = true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091601_793317501",
+      "id": "paragraph_1675161228010_-627065343",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:454",
+      "dateFinished": "2023-02-01T08:13:22+0000",
+      "dateStarted": "2023-02-01T08:13:21+0000"
+    },
+    {
+      "text": "// Pada data diatas dapat kita lihat type data dari seluruh variabel. Untuk data Date berbentuk timestamp, Open berbentuk double, High berbentuk double, Low berbentuk double, Close berbentuk double, Volume berbentuk integer, dan Adj Close berbentuk double. ",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:23+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091601_1766513531",
+      "id": "paragraph_1675179720109_834452463",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:455",
+      "dateFinished": "2023-02-01T08:13:24+0000",
+      "dateStarted": "2023-02-01T08:13:23+0000"
+    },
+    {
+      "title": "Menampilkan 10 Data Teratas",
+      "text": "data.show(10)",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:24+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------+------------------+------------------+------------------+------------------+--------+------------------+\n|               Date|              Open|              High|               Low|             Close|  Volume|         Adj Close|\n+-------------------+------------------+------------------+------------------+------------------+--------+------------------+\n|2012-01-03 00:00:00|         59.970001|         61.060001|         59.869999|         60.330002|12668800|52.619234999999996|\n|2012-01-04 00:00:00|60.209998999999996|         60.349998|         59.470001|59.709998999999996| 9593300|         52.078475|\n|2012-01-05 00:00:00|         59.349998|         59.619999|         58.369999|         59.419998|12768200|         51.825539|\n|2012-01-06 00:00:00|         59.419998|         59.450001|         58.869999|              59.0| 8069400|          51.45922|\n|2012-01-09 00:00:00|         59.029999|         59.549999|         58.919998|             59.18| 6679300|51.616215000000004|\n|2012-01-10 00:00:00|             59.43|59.709998999999996|             58.98|59.040001000000004| 6907300|         51.494109|\n|2012-01-11 00:00:00|         59.060001|         59.529999|59.040001000000004|         59.400002| 6365600|         51.808098|\n|2012-01-12 00:00:00|59.790001000000004|              60.0|         59.400002|              59.5| 7236400|51.895315999999994|\n|2012-01-13 00:00:00|             59.18|59.610001000000004|59.009997999999996|59.540001000000004| 7729300|51.930203999999996|\n|2012-01-17 00:00:00|         59.869999|60.110001000000004|             59.52|         59.849998| 8500000|         52.200581|\n+-------------------+------------------+------------------+------------------+------------------+--------+------------------+\nonly showing top 10 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=2",
+              "$$hashKey": "object:3251"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091601_-261366523",
+      "id": "paragraph_1674901319160_-418708703",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:456",
+      "dateFinished": "2023-02-01T08:13:28+0000",
+      "dateStarted": "2023-02-01T08:13:24+0000"
+    },
+    {
+      "title": "Summary Dataset",
+      "text": "data.describe().show",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:28+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+\n|summary|              Open|             High|              Low|            Close|           Volume|        Adj Close|\n+-------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+\n|  count|              1258|             1258|             1258|             1258|             1258|             1258|\n|   mean| 72.35785375357709|72.83938807631165| 71.9186009594594|72.38844998012726|8222093.481717011|67.23883848728146|\n| stddev|  6.76809024470826|6.768186808159218|6.744075756255496|6.756859163732991|  4519780.8431556|6.722609449996857|\n|    min|56.389998999999996|        57.060001|        56.299999|        56.419998|          2094900|        50.363689|\n|    max|         90.800003|        90.970001|            89.25|        90.470001|         80898100|84.91421600000001|\n+-------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=3",
+              "$$hashKey": "object:3287"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091601_888709777",
+      "id": "paragraph_1674901459014_480118423",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:457",
+      "dateFinished": "2023-02-01T08:13:33+0000",
+      "dateStarted": "2023-02-01T08:13:28+0000"
+    },
+    {
+      "text": "// Data diatas menghasilkan summary dari dataset. Dari data diatas kita dapat menemukan jumlah data dari tiap variabel, rata - rata nilai dari tiap variabel, standard deviasi dari tiap variabel, nilai minimum dari tiap variabel, dan nilai maksimum dari tiap variavel. ",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:33+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091601_1242386085",
+      "id": "paragraph_1675180011155_1210234278",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:458",
+      "dateFinished": "2023-02-01T08:13:35+0000",
+      "dateStarted": "2023-02-01T08:13:33+0000"
+    },
+    {
+      "title": "Jumlah Variabel \"High\" yang Memiliki Nilai Lebih Besar dari 75",
+      "text": "data.filter(data(\"high\") > 75).count()",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:35+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres8\u001b[0m: \u001b[1m\u001b[32mLong\u001b[0m = 500\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=4",
+              "$$hashKey": "object:3332"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091602_-42658496",
+      "id": "paragraph_1674984098656_-212605156",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:459",
+      "dateFinished": "2023-02-01T08:13:39+0000",
+      "dateStarted": "2023-02-01T08:13:35+0000"
+    },
+    {
+      "text": "// Data diatas menghasilkan output banyaknya data dari variabel high yang memiliki nilai lebih besar dari 75, yang dimana jumlahnya adalah 500",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:39+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091602_179979170",
+      "id": "paragraph_1675180180667_-1950016493",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:460",
+      "dateFinished": "2023-02-01T08:13:40+0000",
+      "dateStarted": "2023-02-01T08:13:39+0000"
+    },
+    {
+      "title": "Jumlah Variabel \"High\" yang Memiliki Nilai 75 dan Lebih Kecil dari 75",
+      "text": "data.filter(data(\"high\") <= 75).count()",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:40+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres11\u001b[0m: \u001b[1m\u001b[32mLong\u001b[0m = 758\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=5",
+              "$$hashKey": "object:3377"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091602_-2118055585",
+      "id": "paragraph_1675161700382_-1495881673",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:461",
+      "dateFinished": "2023-02-01T08:13:43+0000",
+      "dateStarted": "2023-02-01T08:13:40+0000"
+    },
+    {
+      "text": "// Data diatas menghasilkan output banyaknya data dari variabel high yang memiliki nilai kurang dari atau sama dengan 75, yang dimana jumlahnya adalah sebanyak 758",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:43+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091602_1323785230",
+      "id": "paragraph_1675180228611_-1753173817",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:462",
+      "dateFinished": "2023-02-01T08:13:45+0000",
+      "dateStarted": "2023-02-01T08:13:43+0000"
+    },
+    {
+      "title": "Membuat SQL Table",
+      "text": "data.createOrReplaceTempView(\"walmart\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:45+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091602_408476742",
+      "id": "paragraph_1675163441817_-1377827739",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:463",
+      "dateFinished": "2023-02-01T08:13:49+0000",
+      "dateStarted": "2023-02-01T08:13:45+0000"
+    },
+    {
+      "text": "// Sebelum memanipulasi dan menganilisi menggunakan query, pertama kita buat terlebih dahulu tabel SQL. Tabel SQL tersebut kita namakan \"walmart\"",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:49+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091602_93972973",
+      "id": "paragraph_1675180290789_1935329168",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:464",
+      "dateFinished": "2023-02-01T08:13:50+0000",
+      "dateStarted": "2023-02-01T08:13:49+0000"
+    },
+    {
+      "title": "Mengurutkan Data (Descending) Berdasarkan Variabel \"High\" ",
+      "text": "var Result1 = spark.sql(\"SELECT * FROM walmart ORDER BY High DESC\")\nResult1.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:13:50+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------+-----------------+-----------------+-----------------+-----------------+--------+-----------------+\n|               Date|             Open|             High|              Low|            Close|  Volume|        Adj Close|\n+-------------------+-----------------+-----------------+-----------------+-----------------+--------+-----------------+\n|2015-01-13 00:00:00|        90.800003|        90.970001|            88.93|        89.309998| 8215400|        83.825448|\n|2015-01-08 00:00:00|        89.209999|90.66999799999999|            89.07|        90.470001|12713600|84.91421600000001|\n|2015-01-09 00:00:00|            90.32|        90.389999|            89.25|        89.349998| 8522500|        83.862993|\n|2015-01-12 00:00:00|        89.360001|        90.309998|        89.220001|        90.019997| 7372500|        84.491846|\n|2015-01-23 00:00:00|88.41999799999999|        89.260002|        87.889999|        88.510002| 7565800|83.07458100000001|\n|2015-01-26 00:00:00|        88.309998|        89.160004|        88.120003|        88.629997| 4666700|        83.187207|\n|2015-01-07 00:00:00|        86.779999|            88.68|86.66999799999999|        88.599998| 8498400|        83.159051|\n|2015-01-14 00:00:00|        87.650002|        88.519997|             86.5|        86.610001|11745600|        81.291259|\n|2015-01-27 00:00:00|        88.279999|        88.459999|        87.260002|        87.529999| 6020500|         82.15476|\n|2015-01-22 00:00:00|        87.230003|        88.400002|        86.860001|        88.300003| 7123800|        82.877478|\n|2015-01-28 00:00:00|        88.019997|        88.230003|        86.769997|            86.82| 5936800|        81.488362|\n|2014-11-28 00:00:00|            86.18|        88.089996|        85.900002|        87.540001| 7820600|81.70768000000001|\n|2015-02-06 00:00:00|        87.260002|             88.0|        86.779999|87.33000200000001| 5617600|        81.967045|\n|2015-01-15 00:00:00|             87.0|        87.779999|        86.699997|        87.379997| 9412700|         82.01397|\n|2015-01-29 00:00:00|            87.07|        87.720001|        86.269997|        87.720001| 6522800|82.33309399999999|\n|2015-01-20 00:00:00|            86.82|        87.699997|        85.550003|        86.690002| 7853100|        81.366348|\n|2015-01-16 00:00:00|        87.199997|        87.459999|        86.230003|        86.769997| 8408900|81.44143000000001|\n|2014-12-31 00:00:00|87.08000200000001|        87.440002|        85.860001|        85.879997| 4151400|        80.606085|\n|2015-02-10 00:00:00|        86.620003|        87.410004|86.41999799999999|        87.290001| 5732100|          81.9295|\n|2015-01-30 00:00:00|        86.779999|        87.360001|        84.900002|        84.980003|10280200|         79.76136|\n+-------------------+-----------------+-----------------+-----------------+-----------------+--------+-----------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mResult1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Date: timestamp, Open: double ... 5 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=6",
+              "$$hashKey": "object:3440"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091602_-1124051503",
+      "id": "paragraph_1675162036387_347760381",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:465",
+      "dateFinished": "2023-02-01T08:13:58+0000",
+      "dateStarted": "2023-02-01T08:13:50+0000"
+    },
+    {
+      "text": "/ Query diatas digunakan untuk menghasilkan seluruh data dari dataset yang diurutkan dari data terbesar ke data terkecil berdasarkan variabel High.\n// Tabel tersebut disimpan dalam 1 variabel yang bernama Result1\n// Dapat dilihat bahwa nilai tertinggi dari High adalah 90.970001 ada pada bulan Januari Tahun 2015 Tanggal 13",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:18:09+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091603_1488401108",
+      "id": "paragraph_1675180360296_1579221397",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:466",
+      "dateFinished": "2023-02-01T08:13:59+0000",
+      "dateStarted": "2023-02-01T08:13:58+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
+    },
+    {
+      "title": "Save Result1 (JSON)",
+      "text": "Result1.write.format(\"json\").mode(\"overwrite\").option(\"header\", \"true\").save(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result1\")\nspark.read.format(\"json\").load(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result1\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:00+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres20\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Adj Close: double, Close: double ... 5 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=7",
+              "$$hashKey": "object:3540"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=8",
+              "$$hashKey": "object:3541"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=9",
+              "$$hashKey": "object:3542"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=10",
+              "$$hashKey": "object:3543"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091603_14686586",
+      "id": "paragraph_1675167068685_1680677978",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:467",
+      "dateFinished": "2023-02-01T08:14:17+0000",
+      "dateStarted": "2023-02-01T08:14:00+0000"
+    },
+    {
+      "title": "Menghitung Mean Variabel \"High\"",
+      "text": "var Result2 = spark.sql(\"SELECT AVG(High) AS AverageHigh FROM walmart\")\nResult2.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:17+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------+\n|      AverageHigh|\n+-----------------+\n|72.83938807631165|\n+-----------------+\n\n\u001b[1m\u001b[34mResult2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [AverageHigh: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=11",
+              "$$hashKey": "object:3591"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091603_-737054664",
+      "id": "paragraph_1675163380685_-799078397",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:468",
+      "dateFinished": "2023-02-01T08:14:21+0000",
+      "dateStarted": "2023-02-01T08:14:17+0000"
+    },
+    {
+      "text": "// Query diatas digunakan untuk menghasilkan nilai rata - rata / Mean dari variabel \"High\" yang dinamakan \"AverageHigh\" \n// Tabel tersebut disimpan pada variabel Result2\n// Dapat dilihat bahwa rata-rata dari variabel \"High\" adalah 72.83938807631165",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:18:48+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091604_-2125688159",
+      "id": "paragraph_1675180608719_1048503382",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:469",
+      "dateFinished": "2023-02-01T08:14:23+0000",
+      "dateStarted": "2023-02-01T08:14:21+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
+    },
+    {
+      "title": "Save Result2 (JSON)",
+      "text": "Result2.write.format(\"json\").mode(\"overwrite\").option(\"header\", \"true\").save(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result2\")\nspark.read.format(\"json\").load(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result2\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:23+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres24\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [AverageHigh: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=12",
+              "$$hashKey": "object:3646"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=13",
+              "$$hashKey": "object:3647"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091604_-1813824924",
+      "id": "paragraph_1675167605409_1568135806",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:470",
+      "dateFinished": "2023-02-01T08:14:26+0000",
+      "dateStarted": "2023-02-01T08:14:23+0000"
+    },
+    {
+      "title": "Mean Variabel \"High\" Setiap Bulan",
+      "text": "var Result3 = spark.sql(\"SELECT month(Date) AS Month, AVG(High) AS High FROM walmart GROUP BY Month ORDER BY Month\")\nResult3.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:26+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+-----------------+\n|Month|             High|\n+-----+-----------------+\n|    1|71.97009924752473|\n|    2|71.72845387628868|\n|    3|72.20289709345795|\n|    4|73.45123863809525|\n|    5|72.71783049056604|\n|    6| 72.9262265471698|\n|    7|74.77878527102803|\n|    8|73.51781822727274|\n|    9|72.60294148039216|\n|   10|72.12963649090909|\n|   11|72.52673264356439|\n|   12|73.35566025471698|\n+-----+-----------------+\n\n\u001b[1m\u001b[34mResult3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Month: int, High: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=14",
+              "$$hashKey": "object:3689"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091604_901217608",
+      "id": "paragraph_1675163724151_61598440",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:471",
+      "dateFinished": "2023-02-01T08:14:35+0000",
+      "dateStarted": "2023-02-01T08:14:26+0000"
+    },
+    {
+      "text": "// Query diatas digunakan untuk menghasilkan nilai rata - rata / Mean dari variabel \"High\"  setian bulannya \n// Tabel tersebut disimpan pada variabel Result3\n// Dapat dilihat bahwa rata-rata dari variabel \"High\" tertinggi ada pada bulan 7 sebesar 74,778 dan terendah ada pada bulan 2 sebesar 71,728",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:35+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091604_-1880122291",
+      "id": "paragraph_1675234413337_-940113132",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:472",
+      "dateFinished": "2023-02-01T08:14:36+0000",
+      "dateStarted": "2023-02-01T08:14:35+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
+    },
+    {
+      "title": "Save Result3 (JSON)",
+      "text": "Result3.write.format(\"json\").mode(\"overwrite\").option(\"header\", \"true\").save(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result3\")\nspark.read.format(\"json\").load(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result3\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:36+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres28\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [High: double, Month: bigint]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=15",
+              "$$hashKey": "object:3765"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=16",
+              "$$hashKey": "object:3766"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=17",
+              "$$hashKey": "object:3767"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091604_757854985",
+      "id": "paragraph_1675167694546_-680710606",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:473",
+      "dateFinished": "2023-02-01T08:14:44+0000",
+      "dateStarted": "2023-02-01T08:14:37+0000"
+    },
+    {
+      "title": "Selisih dari Nilai Tertinggi Variabel \"High\" dan Nilai Terendah Variabel \"Low\" di Setiap Bulan",
+      "text": "var Result4 = spark.sql(\"SELECT month(Date) AS Month, MAX(High)-MIN(Low) AS difference FROM walmart GROUP BY Month ORDER BY Month\")\nResult4.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:45+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+------------------+\n|Month|        difference|\n+-----+------------------+\n|    1|32.600001999999996|\n|    2|29.790001000000004|\n|    3|25.360001000000004|\n|    4|25.099999000000004|\n|    5|21.689998999999993|\n|    6|12.630004999999997|\n|    7| 9.540000000000006|\n|    8|              17.5|\n|    9|14.810004999999997|\n|   10|         22.210003|\n|   11|         31.789997|\n|   12|29.120002000000007|\n+-----+------------------+\n\n\u001b[1m\u001b[34mResult4\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Month: int, difference: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=18",
+              "$$hashKey": "object:3813"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091604_-34819734",
+      "id": "paragraph_1675165853484_955112170",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:474",
+      "dateFinished": "2023-02-01T08:14:50+0000",
+      "dateStarted": "2023-02-01T08:14:45+0000"
+    },
+    {
+      "text": "// Query diatas digunakan untuk menghasilkan selisih dari nilai tertinggi pada variabel High dan nilai terendah pada variabel Low \n// Tabel tersebut disimpan dalam variabel Result4\n// Dapat kita lihat bahwa perbedaan yang paling jauh ada pada bulan 1 sebesar 32,6 dan perbedaan paling dekat ada pada bulan 7 sebesar 9,5",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:50+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091604_1554108329",
+      "id": "paragraph_1675180829871_1172582860",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:475",
+      "dateFinished": "2023-02-01T08:14:51+0000",
+      "dateStarted": "2023-02-01T08:14:50+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
+    },
+    {
+      "title": "Save Result4 (JSON)",
+      "text": "//save result4 bentuk file json\nResult4.write.format(\"json\").mode(\"overwrite\").option(\"header\", \"true\").save(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result4\")\nspark.read.format(\"json\").load(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result4\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:14:51+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres32\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Month: bigint, difference: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=19",
+              "$$hashKey": "object:3885"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=20",
+              "$$hashKey": "object:3886"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=21",
+              "$$hashKey": "object:3887"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091604_-979285407",
+      "id": "paragraph_1675167828070_-1875636746",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:476",
+      "dateFinished": "2023-02-01T08:15:00+0000",
+      "dateStarted": "2023-02-01T08:14:51+0000"
+    },
+    {
+      "title": "Menampilkan 10 Data Tertinggi Berdasarkan Nilai Variabel \"Volume\"",
+      "text": "var Result5 = spark.sql(\"SELECT month(Date) AS Month, High, Volume FROM walmart ORDER BY Volume DESC\")\nResult5.show(10)",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:15:00+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+------------------+--------+\n|Month|              High|  Volume|\n+-----+------------------+--------+\n|   10|         67.949997|80898100|\n|   10|         60.470001|46253500|\n|    4|60.240002000000004|38007300|\n|    5| 69.33000200000001|35076700|\n|    4|         59.349998|30090600|\n|    5|              62.5|29292400|\n|    2|         59.900002|28630200|\n|    4|             58.43|28011800|\n|    2|         64.779999|27894600|\n|    8|         75.190002|26858300|\n+-----+------------------+--------+\nonly showing top 10 rows\n\n\u001b[1m\u001b[34mResult5\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Month: int, High: double ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=22",
+              "$$hashKey": "object:3931"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091605_1207193899",
+      "id": "paragraph_1675165938336_2138948310",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:477",
+      "dateFinished": "2023-02-01T08:15:04+0000",
+      "dateStarted": "2023-02-01T08:15:00+0000"
+    },
+    {
+      "text": "// Query diatas digunakan untuk menghasilkan data dari variabel Date bagian Month, variabel High dan variabel Volume yang diurutkan dari data terbesar\n// Tabel tersebut disimpan dalam variabel Result5\n// Dapat dilihat bahwa Volume terbanyak sebesar 80898100 dengan High sebesar 67.949997 dan terjadi pada bulan Oktober.",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:19:35+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091605_-434751169",
+      "id": "paragraph_1675181085449_-1827934565",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:478",
+      "dateFinished": "2023-02-01T08:19:36+0000",
+      "dateStarted": "2023-02-01T08:19:35+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
+    },
+    {
+      "title": "Save Result5 (JSON)",
+      "text": "Result5.write.format(\"json\").mode(\"overwrite\").option(\"header\", \"true\").save(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result5\")\nspark.read.format(\"json\").load(\"file:////home/verulam-blue/AoL DMO Aditya dan Catherine/Result5\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-01T08:15:05+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres36\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [High: double, Month: bigint ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=23",
+              "$$hashKey": "object:4027"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=24",
+              "$$hashKey": "object:4028"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=25",
+              "$$hashKey": "object:4029"
+            },
+            {
+              "jobUrl": "http://10.0.2.15:4040/jobs/job?id=26",
+              "$$hashKey": "object:4030"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675239091605_-668282203",
+      "id": "paragraph_1675166464126_2142924103",
+      "dateCreated": "2023-02-01T08:11:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:479",
+      "dateFinished": "2023-02-01T08:15:21+0000",
+      "dateStarted": "2023-02-01T08:15:05+0000"
+    }
+  ],
+  "name": "Aol Project",
+  "id": "2HRM2V9BM",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Aol Project"
+}
